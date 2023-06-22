@@ -25,8 +25,6 @@
                     <span class="leave-reply">
                     {% if article.comment_set and article.comment_set.count %}
                         {{ article.comment_set.count }}个评论
-                    {% else %}
-                        发表评论
                     {% endif %}
                     </span>
                 </a>
@@ -47,9 +45,7 @@
 
     <div class="entry-content" itemprop="articleBody">
         {% if  isindex %}
-            {{ article.body|custom_markdown|escape|truncatechars_content }}
-            <p class='read-more'><a
-                    href=' {{ article.get_absolute_url }}'>Read more</a></p>
+{#            {{ article.body|custom_markdown|escape|truncatechars_content }}#}
         {% else %}
 
             {% if article.show_toc %}
@@ -61,7 +57,7 @@
             {% endif %}
             <div class="article">
 
-                    {{ article.body|custom_markdown|escape }}
+                {{ article.body|custom_markdown|escape }}
 
             </div>
         {% endif %}

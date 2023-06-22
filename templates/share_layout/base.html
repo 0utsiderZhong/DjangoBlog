@@ -53,9 +53,10 @@
 <div id="page" class="hfeed site">
     <header id="masthead" class="site-header" role="banner">
         <hgroup>
-            <h1 class="site-title"><a href="/" title="{{ SITE_NAME }}" rel="home">{{ SITE_NAME }}</a>
+            {#            <img src="jeffrey.png" width="42" height="42" align="right">#}
+            <h1 class="site-title"><a href="/" title="{{ SITE_NAME }}" rel="home" style="color: #cb4b16">{{ SITE_NAME }}</a>
             </h1>
-            <h2 class="site-description">{{ SITE_DESCRIPTION }}</h2>
+            <h2 class="site-description"><a style="font-weight:bold">{{ SITE_DESCRIPTION }}</a></h2>
         </hgroup>
 
         {% cache 36000 nav %}
