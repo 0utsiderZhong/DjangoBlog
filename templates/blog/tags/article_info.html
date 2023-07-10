@@ -43,9 +43,23 @@
         {% endif %}
     </header><!-- .entry-header -->
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C9T7KD2Y2W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-C9T7KD2Y2W');
+    </script>
+
     <div class="entry-content" itemprop="articleBody">
         {% if  isindex %}
-{#            {{ article.body|custom_markdown|escape|truncatechars_content }}#}
+            {#            {{ article.body|custom_markdown|escape|truncatechars_content }}#}
         {% else %}
 
             {% if article.show_toc %}
