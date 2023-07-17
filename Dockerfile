@@ -1,5 +1,7 @@
 # docker build -t jeffrey/djangoblog:image20230710 -f Dockerfile .
 # docker run -d  -p 8000:8000 -e DJANGO_MYSQL_HOST=172.17.0.1 -e DJANGO_MYSQL_PASSWORD=mysql_pwd -e DJANGO_MYSQL_USER=root -e DJANGO_MYSQL_DATABASE=djangoblog --name djangoblog jeffrey/djangoblog:image20230710
+# docker exec -it djangoblog mkdir /code/djangoblog/uploads
+# docker cp /data/editor djangoblog:/code/djangoblog/uploads/editor
 FROM python:3
 ENV PYTHONUNBUFFERED 1
 WORKDIR /code/djangoblog/
