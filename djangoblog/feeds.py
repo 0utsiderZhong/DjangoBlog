@@ -31,7 +31,7 @@ class DjangoBlogFeed(Feed):
 
     def feed_copyright(self):
         now = timezone.now()
-        return "Copyright© {year} 且听风吟".format(year=now.year)
+        return "Copyright© {year} 峰回路转".format(year=now.year)
 
     def item_link(self, item):
         return item.get_absolute_url()
