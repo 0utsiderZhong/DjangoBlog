@@ -11,13 +11,13 @@
     <meta property="og:site_name" content="{{ SITE_NAME }}"/>
 {% endblock %}
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C9T7KD2Y2W"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C9T7KD2Y3W"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-C9T7KD2Y2W');
+  gtag('config', 'G-C9T7KD2Y3W');
 </script>
 {% block content %}
     <div id="primary" class="site-content">
@@ -42,14 +42,14 @@
                 {% endfor %}
                 {% if page.has_previous or page.has_next %}
                     <nav id="nav-below" class="navigation" role="navigation">
-                        <h3 class="assistive-text">文章导航</h3>
+                        <h3 class="assistive-text">navigation</h3>
                         {% if page.has_previous %}
                             <div class="nav-previous"><a
                                     href="?q={{ query }}&amp;page={{ page.previous_page_number }}"><span
-                                    class="meta-nav">&larr;</span> 早期文章</a></div>
+                                    class="meta-nav">&larr;</span> previous blog</a></div>
                         {% endif %}
                         {% if page.has_next %}
-                            <div class="nav-next"><a href="?q={{ query }}&amp;page={{ page.next_page_number }}">较新文章
+                            <div class="nav-next"><a href="?q={{ query }}&amp;page={{ page.next_page_number }}">latest blog
                                 <span
                                         class="meta-nav">→</span></a>
                             </div>

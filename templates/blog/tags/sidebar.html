@@ -3,9 +3,8 @@
     <aside id="search-2" class="widget widget_search">
         <form role="search" method="get" id="searchform" class="searchform" action="/search">
             <div>
-                <label class="screen-reader-text" for="s">搜索：</label>
-                <input type="text" value="" name="q" id="q"/>
-                <input type="submit" id="searchsubmit" value="搜索"/>
+                <input placeholder="blog name" type="text" value="" name="q" id="q"/>
+                <input type="submit" id="searchsubmit" value="Search"/>
             </div>
         </form>
     </aside>
@@ -36,7 +35,7 @@
         </aside>
     {% endif %}
     {% if sidebar_categorys %}
-        <aside id="su_siloed_terms-2" class="widget widget_su_siloed_terms"><p class="widget-title">分类目录</p>
+        <aside id="su_siloed_terms-2" class="widget widget_su_siloed_terms"><p class="widget-title">Category Tag</p>
             <ul>
                 {% for c in sidebar_categorys %}
                     <li class="cat-item cat-item-184"><a href={{ c.get_absolute_url }}>{{ c.name }}</a>
@@ -62,7 +61,7 @@
         </aside>
     {% endif %}
     {% if recent_articles %}
-        <aside id="recent-posts-2" class="widget widget_recent_entries"><p class="widget-title">近期文章</p>
+        <aside id="recent-posts-2" class="widget widget_recent_entries"><p class="widget-title">Previous Blog</p>
             <ul>
 
                 {% for a in  recent_articles %}
@@ -74,7 +73,7 @@
         </aside>
     {% endif %}
     {% if sidabar_links %}
-        <aside id="linkcat-0" class="widget widget_links"><p class="widget-title">书签</p>
+        <aside id="linkcat-0" class="widget widget_links"><p class="widget-title">Tag</p>
             <ul class='xoxo blogroll'>
                 {% for l in sidabar_links %}
                     <li>
@@ -93,7 +92,7 @@
         </aside>
     {% endif %}
     {% if sidebar_tags %}
-        <aside id="tag_cloud-2" class="widget widget_tag_cloud"><p class="widget-title">标签云</p>
+        <aside id="tag_cloud-2" class="widget widget_tag_cloud"><p class="widget-title">Tag Cloud</p>
             <div class="tagcloud">
                 {% for tag,count,size in sidebar_tags %}
                     <a href="{{ tag.get_absolute_url }}"
@@ -104,37 +103,24 @@
             </div>
         </aside>
     {% endif %}
-{#    <aside id="text-2" class="widget widget_text"><p class="widget-title">欢迎您star或者fork本站源码</p>#}
-{#        <div class="textwidget">#}
-{##}
-{#            <p>#}
-{#                <a href="https://github.com/0utsiderZhong" rel="nofollow">#}
-{#                <img src="https://resource.lylinux.net/img.shields.io/github/stars/0utsiderZhong/djangoblog.svg?style=social&amp;label=Star"#}
-{#                    alt="GitHub stars">#}
-{#                </a>#}
-{#                <a href="https://github.com/0utsiderZhong" rel="nofollow">#}
-{#                <img src="https://resource.lylinux.net/img.shields.io/github/forks/0utsiderZhong/djangoblog.svg?style=social&amp;label=Fork"#}
-{#                    alt="GitHub forks"></a>#}
-{#            </p>#}
-{#        </div>#}
-{#    </aside>#}
 
-    <aside id="meta-3" class="widget widget_meta"><p class="widget-title">功能</p>
+
+    <aside id="meta-3" class="widget widget_meta"><p class="widget-title">Management</p>
         <ul>
-            <li><a href="/admin/" rel="nofollow">管理站点</a></li>
+            <li><a href="/admin/" rel="nofollow">Admin</a></li>
             {% if user.is_authenticated %}
-                <li><a href="{% url "account:logout" %}" rel="nofollow">登出</a>
+                <li><a href="{% url "account:logout" %}" rel="nofollow">Login</a>
                 </li>
 
             {% else %}
-                <li><a href="{% url "account:login" %}" rel="nofollow">登录</a></li>
+                <li><a href="{% url "account:login" %}" rel="nofollow">Logout</a></li>
             {% endif %}
             {% if user.is_superuser %}
-                <li><a href="{% url 'owntracks:show_dates' %}" target="_blank">运动轨迹记录</a></li>
+                <li><a href="{% url 'owntracks:show_dates' %}" target="_blank">Show Dates</a></li>
             {% endif %}
 
         </ul>
     </aside>
 
-    <div id="rocket" class="show" title="点我返回顶部"></div>
+    <div id="rocket" class="show" title="Back To Top"></div>
 </div><!-- #secondary -->
