@@ -13,11 +13,15 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C9T7KD2Y3W"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-C9T7KD2Y3W');
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-C9T7KD2Y3W');
 </script>
 {% block content %}
     <div id="primary" class="site-content">
@@ -31,7 +35,7 @@
                         </h2>
                     {% else %}
                         <h2 class="archive-title">
-                            搜索：<span style="color: red">{{ query }} </span> &nbsp;&nbsp;
+                            Search: <span style="color: red">{{ query }} </span> &nbsp;&nbsp;
                         </h2>
                     {% endif %}
                 </header><!-- .archive-header -->
@@ -60,7 +64,7 @@
             {% else %}
                 <header class="archive-header">
 
-                    <h1 class="archive-title">哎呀，关键字：<span>{{ query }}</span>没有找到结果，要不换个词再试试？</h1>
+                    <h1 class="archive-title">Keywords <span>{{ query }}</span> have no result</h1>
                 </header><!-- .archive-header -->
             {% endif %}
         </div><!-- #content -->

@@ -56,7 +56,7 @@ close_article_commentstatus.short_description = '关闭文章评论'
 open_article_commentstatus.short_description = '打开文章评论'
 
 
-class ArticlelAdmin(admin.ModelAdmin):
+class ArticleAdmin(admin.ModelAdmin):
     list_per_page = 20
     search_fields = ('body', 'title')
     form = ArticleForm
@@ -89,13 +89,13 @@ class ArticlelAdmin(admin.ModelAdmin):
     link_to_category.short_description = '分类目录'
 
     def get_form(self, request, obj=None, **kwargs):
-        form = super(ArticlelAdmin, self).get_form(request, obj, **kwargs)
+        form = super(ArticleAdmin, self).get_form(request, obj, **kwargs)
         form.base_fields['author'].queryset = get_user_model(
         ).objects.filter(is_superuser=True)
         return form
 
     def save_model(self, request, obj, form, change):
-        super(ArticlelAdmin, self).save_model(request, obj, form, change)
+        super(ArticleAdmin, self).save_model(request, obj, form, change)
 
     def get_view_on_site_url(self, obj=None):
         if obj:

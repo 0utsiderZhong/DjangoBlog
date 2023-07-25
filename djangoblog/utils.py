@@ -156,7 +156,7 @@ def get_blog_setting():
             setting.site_name = '肤浅开发工程师'
             setting.site_description = '一个啥也不会的肤浅开发工程师'
             setting.site_seo_description = '一个啥也不会的肤浅开发工程师'
-            setting.site_keywords = 'Django,Python,维维维,jeffrey'
+            setting.site_keywords = 'Django,Python,维维维,Jeffrey'
             setting.article_sub_length = 300
             setting.sidebar_article_count = 10
             setting.sidebar_comment_count = 5

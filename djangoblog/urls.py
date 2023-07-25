@@ -45,12 +45,10 @@ urlpatterns = [
                   re_path(r'', include('comments.urls', namespace='comment')),
                   re_path(r'', include('accounts.urls', namespace='account')),
                   re_path(r'', include('oauth.urls', namespace='oauth')),
-                  re_path(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
-                          name='django.contrib.sitemaps.views.sitemap'),
+                  re_path(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},name='django.contrib.sitemaps.views.sitemap'),
                   re_path(r'^feed/$', DjangoBlogFeed()),
                   re_path(r'^rss/$', DjangoBlogFeed()),
-                  re_path('^search', search_view_factory(view_class=EsSearchView, form_class=ElasticSearchModelSearchForm),
-                          name='search'),
+                  re_path('^search', search_view_factory(view_class=EsSearchView, form_class=ElasticSearchModelSearchForm),name='search'),
                   re_path(r'', include('servermanager.urls', namespace='servermanager')),
                   re_path(r'', include('owntracks.urls', namespace='owntracks'))
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
