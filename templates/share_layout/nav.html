@@ -5,7 +5,7 @@
         <ul id="menu-%e8%8f%9c%e5%8d%95" class="nav-menu">
             <li id="menu-item-3498"
                 class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-3498">
-                <a href="/">Index</a></li>
+                <a href="/" style="color: #1a70fe">Index</a></li>
 
             {% load blog_tags %}
             {% query nav_category_list parent_category=None as root_categorys %}
@@ -23,7 +23,7 @@
             {% endif %}
             <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children">
 
-                <a href="{% url "blog:archives" %}">Archives</a>
+                <a href="{% url "blog:archives" %}" style="color: #1a70fe">Archives</a>
             </li>
         </ul>
     </div>

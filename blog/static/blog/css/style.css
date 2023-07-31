@@ -1743,7 +1743,8 @@ img#wpstats {
 
     .main-navigation li a {
         border-bottom: 0;
-        color: #6a6a6a;
+        color: #1a70fe;
+        font-weight: bold;
         line-height: 3.692307692;
         text-transform: uppercase;
         white-space: nowrap;
