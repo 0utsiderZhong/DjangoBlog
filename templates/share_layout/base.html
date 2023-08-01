@@ -66,12 +66,8 @@
     <header id="masthead" class="site-header" role="banner">
         <hgroup>
             {#            <img src="../asset/favicon.ico" height="200px" width="150px" align="right" alt="">#}
-            <h1 style="text-align: center"><a href="/" title="{{ SITE_NAME }}" rel="home"
-                                              style="color: #cb4b16;font-size: 30px; text-align: center">{{ SITE_NAME }}</a>
-            </h1>
-            <h2 style="text-align: center"><a
-                    style="color: #007cbd; font-size: 25px; align-content: center">{{ SITE_DESCRIPTION }}</a></h2>
-            {#            <h2 class="site-description"><a style="font-weight:bold">{{ SITE_DESCRIPTION }}</a></h2>#}
+            <h1 style="text-align: center"><a href="/" title="{{ SITE_NAME }}" rel="home" style="color: #cb4b16;font-size: 30px; text-align: center">{{ SITE_NAME }}</a></h1>
+            <h2 style="text-align: center"><a style="color: #007cbd; font-size: 25px; align-content: center">{{ SITE_SEO_DESCRIPTION }}</a></h2>
         </hgroup>
 
         {% cache 36000 nav %}
