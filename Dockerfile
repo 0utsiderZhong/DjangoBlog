@@ -1,5 +1,5 @@
-# docker build -t jeffrey/djangoblog:image20230710 -f Dockerfile .
-# docker run -d  -p 8000:8000 -e DJANGO_MYSQL_HOST=172.17.0.1 -e DJANGO_MYSQL_PASSWORD=mysql8 -e DJANGO_MYSQL_USER=root -e DJANGO_MYSQL_DATABASE=djangoblog --name djangoblog jeffrey/djangoblog:image20230710
+# docker build -t sunway/djangoblog:image20230710 -f Dockerfile .
+# docker run -d  -p 8000:8000 -e DJANGO_MYSQL_HOST=172.17.0.1 -e DJANGO_MYSQL_PASSWORD=mysql8 -e DJANGO_MYSQL_USER=root -e DJANGO_MYSQL_DATABASE=djangoblog --name djangoblog sunway/djangoblog:image20230710
 # when build a new image, copy the directory to container which is created by cronjob (/data/editor is the previous data in old container)
 # docker exec -it djangoblog mkdir /code/djangoblog/uploads
 # docker cp /data/editor djangoblog:/code/djangoblog/uploads/editor
