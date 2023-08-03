@@ -1,7 +1,7 @@
 {% load blog_tags %}
 {% load cache %}
+{% if article.category.name != 'English' %}
 <article id="post-{{ article.pk }} " class="post-{{ article.pk }} post type-post status-publish format-standard hentry">
-    {% if article.category.name != 'English' %}
         <header class="entry-header">
             <h1 class="entry-title">
                 {% if  isindex %}
@@ -78,5 +78,6 @@
         </div><!-- .entry-content -->
 
         {% load_article_metas article user %}
-    {% endif %}
+
 </article><!-- #post -->
+{% endif %}
