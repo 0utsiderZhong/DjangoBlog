@@ -40,8 +40,7 @@ class ArticleListView(ListView):
     @property
     def page_number(self):
         page_kwarg = self.page_kwarg
-        page = self.kwargs.get(
-            page_kwarg) or self.request.GET.get(page_kwarg) or 1
+        page = self.kwargs.get(page_kwarg) or self.request.GET.get(page_kwarg) or 1
         return page
 
     def get_queryset_cache_key(self):
@@ -95,6 +94,11 @@ class IndexView(ArticleListView):
 
     def get_queryset_data(self):
         article_list = Article.objects.filter(type='a', status='p')
+        # print('article_list1=', article_list)
+        # 不要展示·English·分类的文章在Index首页
+        article_list = article_list.exclude(category__name='English')
+        # article_list = Article.objects.exclude(article_list, category__name='English')
+        # print('article_list2=', article_list)
         return article_list
 
     def get_queryset_cache_key(self):
@@ -103,9 +107,9 @@ class IndexView(ArticleListView):
 
 
 class ArticleDetailView(DetailView):
-    '''
+    """
     文章详情页面
-    '''
+    """
     template_name = 'blog/article_detail.html'
     model = Article
     pk_url_kwarg = 'article_id'
@@ -133,23 +137,18 @@ class ArticleDetailView(DetailView):
                 page = 1
             if page > paginator.num_pages:
                 page = paginator.num_pages
-
         p_comments = paginator.page(page)
         next_page = p_comments.next_page_number() if p_comments.has_next() else None
         prev_page = p_comments.previous_page_number() if p_comments.has_previous() else None
 
         if next_page:
-            kwargs[
-                'comment_next_page_url'] = self.object.get_absolute_url() + f'?comment_page={next_page}#commentlist-container'
+            kwargs['comment_next_page_url'] = self.object.get_absolute_url() + f'?comment_page={next_page}#commentlist-container'
         if prev_page:
-            kwargs[
-                'comment_prev_page_url'] = self.object.get_absolute_url() + f'?comment_page={prev_page}#commentlist-container'
+            kwargs['comment_prev_page_url'] = self.object.get_absolute_url() + f'?comment_page={prev_page}#commentlist-container'
         kwargs['form'] = comment_form
         kwargs['article_comments'] = article_comments
         kwargs['p_comments'] = p_comments
-        kwargs['comment_count'] = len(
-            article_comments) if article_comments else 0
-
+        kwargs['comment_count'] = len(article_comments) if article_comments else 0
         kwargs['next_article'] = self.object.next_article
         kwargs['prev_article'] = self.object.prev_article
 

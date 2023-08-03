@@ -108,10 +108,8 @@ DATABASES = {
         'USER': os.environ.get('DJANGO_MYSQL_USER') or 'root',
         'PASSWORD': os.environ.get('DJANGO_MYSQL_PASSWORD') or '123456',
         'HOST': os.environ.get('DJANGO_MYSQL_HOST') or '127.0.0.1',
-        'PORT': int(
-            os.environ.get('DJANGO_MYSQL_PORT') or 3306),
-        'OPTIONS': {
-            'charset': 'utf8mb4'},
+        'PORT': int(os.environ.get('DJANGO_MYSQL_PORT') or 3306),
+        'OPTIONS': {'charset': 'utf8mb4'},
     }}
 
 # Password validation
