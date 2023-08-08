@@ -107,6 +107,7 @@ class CommonMarkdown:
                 'codehilite',
                 'toc',
                 'tables',
+                'admonition',
             ]
         )
         body = md.convert(value)
