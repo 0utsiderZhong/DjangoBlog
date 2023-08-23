@@ -1222,7 +1222,7 @@ article.format-link header {
     line-height: 2.181818182;
     font-weight: bold;
     font-style: italic;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     color: #848484;
     background-color: #ebebeb;
     border-radius: 3px;
@@ -1684,12 +1684,13 @@ img#wpstats {
 
     .author-description {
         float: right;
-        width: 80%;
+        width: 30%;
     }
 
     .site {
         margin: 0 auto;
-        max-width: 68%;
+        max-width:84%;
+        max-height: 100%;
         overflow: hidden;
     }
 
@@ -1743,11 +1744,12 @@ img#wpstats {
 
     .main-navigation li a {
         border-bottom: 0;
-        color: #1a70fe;
+        color: #000000;
         font-weight: bold;
         line-height: 3.692307692;
-        text-transform: uppercase;
+        /*text-transform: uppercase;*/
         white-space: nowrap;
+        font-size: 20px;
     }
 
     .main-navigation li a:hover,

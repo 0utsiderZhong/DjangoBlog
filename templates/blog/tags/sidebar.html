@@ -21,7 +21,7 @@
     {% endif %}
     {% if most_read_articles %}
 
-        <aside id="views-4" class="widget widget_views"><p class="widget-title" style="text-transform: none">Views</p>
+        <aside id="views-4" class="widget widget_views"><p class="widget-title" style="text-transform: none;color: #000000">Views</p>
             <ul>
                 {% for a in most_read_articles %}
                     <li>
@@ -35,7 +35,8 @@
         </aside>
     {% endif %}
     {% if sidebar_categorys %}
-        <aside id="su_siloed_terms-2" class="widget widget_su_siloed_terms"><p class="widget-title" style="text-transform: none">Category Tags</p>
+        <aside id="su_siloed_terms-2" class="widget widget_su_siloed_terms">
+            <p class="widget-title" style="text-transform: none;color: #000000">Category Tags</p>
             <ul>
                 {% for c in sidebar_categorys %}
                     <li class="cat-item cat-item-184"><a href={{ c.get_absolute_url }}>{{ c.name }}</a>
@@ -61,7 +62,7 @@
         </aside>
     {% endif %}
     {% if recent_articles %}
-        <aside id="recent-posts-2" class="widget widget_recent_entries"><p class="widget-title" style="text-transform: none">Previous Blogs</p>
+        <aside id="recent-posts-2" class="widget widget_recent_entries"><p class="widget-title" style="text-transform: none;color: #000000">Previous Blogs</p>
             <ul>
 
                 {% for a in  recent_articles %}
@@ -95,7 +96,7 @@
     {% endif %}
 
 
-    <aside id="meta-3" class="widget widget_meta"><p class="widget-title" style="text-transform: none">Management</p>
+    <aside id="meta-3" class="widget widget_meta"><p class="widget-title" style="text-transform: none;color: #000000">Management</p>
         <ul>
             <li><a href="/admin/" rel="nofollow">Admin</a></li>
             {% if user.is_authenticated %}

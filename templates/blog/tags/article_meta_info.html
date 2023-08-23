@@ -6,17 +6,17 @@
             Published in: &nbsp;
             <a href="{{ article.get_absolute_url }}" title="{% datetimeformat article.pub_time %}" itemprop="datePublished" content="{% datetimeformat article.pub_time %}"
                rel="bookmark">
-                <time class="entry-date updated" datetime="{{ article.pub_time }}">{% datetimeformat article.pub_time %}</time>
+                <time class="entry-date updated" datetime="{{ article.pub_time }}" style="color: #c13e2c">{% datetimeformat article.pub_time %}</time>
             </a>
             {% if article.type == 'a' %}
-                &nbsp;&nbsp;&nbsp;Category tag: &nbsp;<a href="{{ article.category.get_absolute_url }}" rel="category tag">{{ article.category.name }}</a>
+                &nbsp;&nbsp;&nbsp;Category tag: &nbsp;<a href="{{ article.category.get_absolute_url }}" rel="category tag" style="color: #c13e2c">{{ article.category.name }}</a>
             {% endif %}
             <span class="by-author"> &nbsp;&nbsp;&nbsp;Author:
         <span class="author vcard">
             <a class="url fn n" href="{{ article.author.get_absolute_url }}"
                title="check the blogs published by {{ article.author.username }}" rel="author">
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span itemprop="name" itemprop="publisher">{{ article.author.username }}</span>
+            <span itemprop="name" itemprop="publisher" style="color: #c13e2c">{{ article.author.username }}</span>
             </span>
             </a>
         </span>
