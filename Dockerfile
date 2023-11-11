@@ -3,7 +3,7 @@
 # when build a new image, copy the directory to container which is created by cronjob (/data/editor is the previous data in old container)
 # docker exec -it djangoblog mkdir /code/djangoblog/uploads
 # docker cp /data/editor djangoblog:/code/djangoblog/uploads/editor
-FROM python:3
+FROM python:3.10
 ENV PYTHONUNBUFFERED 1
 WORKDIR /code/djangoblog/
 RUN  apt-get install  default-libmysqlclient-dev -y && \

@@ -1,5 +1,3 @@
-# https://stackoverflow.com/questions/74550830/error-could-not-build-wheels-for-aiohttp-which-is-required-to-install-pyprojec
-aiohttp==3.9.0b0
 coverage==7.2.7
 bleach==6.0.0
 Django==4.2.3
