@@ -1,8 +1,11 @@
 {% load blog_tags %}
 {% load cache %}
+<br>
+<br>
+<br>
 <article id="post-{{ article.pk }} " class="post-{{ article.pk }} post type-post status-publish format-standard hentry">
         <header class="entry-header">
-            <h1 class="entry-title">
+            <h1 class="entry-title" style="font-weight: bold;font-size: 50px;text-align: center">
                 {% if  isindex %}
                     {% if article.article_order > 0 %}
                         <a href="{{ article.get_absolute_url }}"
