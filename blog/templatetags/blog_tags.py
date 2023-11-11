@@ -186,7 +186,7 @@ def load_sidebar(user, linktype):
 
 
 @register.inclusion_tag('blog/tags/article_meta_info.html')
-def load_article_metas(article, user):
+def load_article_metas(article, user, isshowfooter):
     """
     获得文章meta信息
     :param article:
@@ -194,7 +194,8 @@ def load_article_metas(article, user):
     """
     return {
         'article': article,
-        'user': user
+        'user': user,
+        'isindex': isshowfooter,
     }
 
 

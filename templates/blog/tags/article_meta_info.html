@@ -2,11 +2,6 @@
 {% load cache %}
 {% with article.id|add:user.is_authenticated as cachekey %}
     {% cache 36000 metainfo cachekey %}
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <footer class="entry-meta">
             Published in: &nbsp;
             <a href="{{ article.get_absolute_url }}" title="{% datetimeformat article.pub_time %}" itemprop="datePublished" content="{% datetimeformat article.pub_time %}"
