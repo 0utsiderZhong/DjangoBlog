@@ -304,16 +304,16 @@ class BlogSettings(models.Model):
     site_description = models.TextField(
         "网站描述",
         max_length=1000,
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
         default='')
     site_seo_description = models.TextField(
-        "网站SEO描述", max_length=1000, null=False, blank=False, default='')
+        "网站SEO描述", max_length=1000, null=True, blank=True, default='')
     site_keywords = models.TextField(
         "网站关键字",
         max_length=1000,
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
         default='')
     article_sub_length = models.IntegerField("文章摘要长度", default=300)
     sidebar_article_count = models.IntegerField("侧边栏文章数目", default=10)
