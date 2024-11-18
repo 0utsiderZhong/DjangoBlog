@@ -34,6 +34,13 @@ sudo apt-get install libmysqlclient-dev
 sudo apt-get install pkg-config
 ```
 
+```bash
+mysql -u root -p
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+```
+
 如果你没有pip，使用如下方式安装：
 - OS X / Linux 电脑，终端下执行: 
 
