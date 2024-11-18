@@ -26,6 +26,14 @@ mysql客户端从`pymysql`修改成了`mysqlclient`，具体请参考 [pypi](htt
 
 使用pip安装： `pip install -Ur requirements.txt`
 
+```bash
+apt update -y
+apt install mysql-server -y
+apt install python3-pip
+sudo apt-get install libmysqlclient-dev
+sudo apt-get install pkg-config
+```
+
 如果你没有pip，使用如下方式安装：
 - OS X / Linux 电脑，终端下执行: 
 
